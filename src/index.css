@@ -1,0 +1,14 @@
+:root {
+  --primary-color: #00587a;
+  --secondary-color: #008891;
+  --background-color: #e7e7de;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: var(--background-color);
+}
+
+/* You can add additional global styles here */
