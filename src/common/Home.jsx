@@ -5,6 +5,7 @@ import {
   faFacebook,
   faInstagram,
 } from "@fortawesome/free-brands-svg-icons";
+import pastaImage from "../assets/images/pasta.jpg";
 import "./Home.css"; // Import the CSS file for styling
 
 const Home = () => {
@@ -19,7 +20,7 @@ const Home = () => {
         <button>Find out more</button>
       </div>
       <div className="image-section">
-        <img src="../../src/assets/images/pasta.jpg" alt="Pasta on a plate" />
+        <img src={pastaImage} alt="Pasta on a plate" />
         <div className="social-icons">
           <div className="icon">
             <FontAwesomeIcon icon={faTwitter} size="2x" />
