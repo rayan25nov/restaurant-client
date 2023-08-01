@@ -1,0 +1,35 @@
+.container {
+  text-align: center;
+  padding: 2rem;
+}
+
+.heading {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.icon {
+  align-items: center;
+  margin: 0;
+}
+
+/* Media queries for responsiveness */
+@media screen and (max-width: 1023px) {
+  .icon {
+    display: none;
+  }
+}
+/* Media queries for responsiveness */
+@media screen and (min-width: 768px) {
+  .card_container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .card_container {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}

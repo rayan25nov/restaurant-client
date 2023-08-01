@@ -6,12 +6,12 @@ import {
   faInstagram,
 } from "@fortawesome/free-brands-svg-icons";
 import pastaImage from "../assets/images/pasta.jpg";
-import "./Home.css"; // Import the CSS file for styling
+import Styles from "./Home.module.css"; // Import the CSS file for styling
 
 const Home = () => {
   return (
-    <div className="container">
-      <div className="text-section">
+    <div className={Styles.container}>
+      <div className={Styles.text_section}>
         <h1>All Delicious Cuisines</h1>
         <p>
           Pizza, Salad, Burger, Pasta, Sandwiches, Desserts, Roti Sabzi, Drinks
@@ -19,16 +19,16 @@ const Home = () => {
         </p>
         <button>Find out more</button>
       </div>
-      <div className="image-section">
+      <div className={Styles.image_section}>
         <img src={pastaImage} alt="Pasta on a plate" />
-        <div className="social-icons">
-          <div className="icon">
+        <div className={Styles.social_icons}>
+          <div className={Styles.icon}>
             <FontAwesomeIcon icon={faTwitter} size="2x" />
           </div>
-          <div className="icon">
+          <div className={Styles.icon}>
             <FontAwesomeIcon icon={faFacebook} size="2x" />
           </div>
-          <div className="icon">
+          <div className={Styles.icon}>
             <FontAwesomeIcon icon={faInstagram} size="2x" />
           </div>
         </div>

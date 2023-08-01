@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faBars,
+  faTimes,
   faUtensils,
   faShoppingCart,
   faPhone,
@@ -57,7 +58,10 @@ const Navbar = () => {
         </div>
       </div>
       <div className={Styles.navbar_toggle} onClick={toggleMenu}>
-        <FontAwesomeIcon icon={faBars} className={Styles.navbar_icon} />
+        <FontAwesomeIcon
+          icon={menuOpen ? faTimes : faBars}
+          className={Styles.navbar_icon}
+        />
       </div>
     </nav>
   );

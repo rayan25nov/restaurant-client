@@ -2,27 +2,27 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  height: 80vh;
+  height: 90vh;
   padding-top: 1rem;
 }
 
-.text-section {
+.text_section {
   flex: 1;
   padding: 2rem;
   text-align: center;
 }
 
-.text-section h1 {
+.text_section h1 {
   font-size: 2.5rem;
   margin-bottom: 1rem;
 }
 
-.text-section p {
+.text_section p {
   font-size: 1.5rem;
   margin-bottom: 1.5rem;
 }
 
-.text-section button {
+.text_section button {
   padding: 1rem 2rem;
   font-size: 1.2rem;
   background-color: #64e952;
@@ -31,7 +31,7 @@
   cursor: pointer;
 }
 
-.image-section {
+.image_section {
   flex: 1;
   position: relative;
   display: flex;
@@ -39,13 +39,13 @@
   padding-right: 3.7rem;
 }
 
-.image-section img {
+.image_section img {
   width: 100%;
   height: auto;
   border-radius: 0.45rem;
 }
 
-.social-icons {
+.social_icons {
   position: absolute;
   top: 50%;
   right: 0;
@@ -58,11 +58,11 @@
   flex-direction: column;
 }
 
-.social-icons .icon {
+.social_icons .icon {
   margin-bottom: 1rem;
 }
 
-.social-icons .icon:last-child {
+.social_icons .icon:last-child {
   margin-bottom: 0;
 }
 
@@ -73,38 +73,38 @@
     height: 100vh;
   }
 
-  .text-section {
+  .text_section {
     padding: 2rem 1rem;
   }
 
-  .text-section h1 {
+  .text_section h1 {
     font-size: 2rem;
   }
 
-  .text-section p {
+  .text_section p {
     font-size: 1.2rem;
   }
 
-  .text-section button {
+  .text_section button {
     font-size: 1rem;
   }
 
-  .image-section {
+  .image_section {
     flex-direction: row;
     align-items: center;
     justify-content: center;
   }
-  .image-section img {
+  .image_section img {
     width: 65%;
     padding-left: 2.25rem;
   }
-  .social-icons .icon {
+  .social_icons .icon {
     font-size: 0.625rem; /* Update the font-size for smaller screens */
   }
 }
 
 @media screen and (max-width: 720px) {
-  .image-section img {
+  .image_section img {
     width: 85%;
     padding-left: 1.75rem;
     border-radius: 0.45rem;
