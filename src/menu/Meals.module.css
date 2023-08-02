@@ -1,3 +1,4 @@
+/* Updated CSS */
 .container {
   text-align: center;
   padding: 2rem;
@@ -8,9 +9,13 @@
   margin-bottom: 1rem;
 }
 
+.main {
+  display: flex;
+  align-items: center; /* Vertically align the icons and cards */
+}
+
 .icon {
-  align-items: center;
-  margin: 0;
+  display: none; /* Hide the icons initially on smaller screens */
 }
 
 /* Media queries for responsiveness */
@@ -18,18 +23,33 @@
   .icon {
     display: none;
   }
+
+  .main {
+    flex-direction: column; /* Stack the icons and cards vertically on smaller screens */
+  }
+
+  .card_container {
+    grid-template-columns: repeat(1, 1fr);
+  }
 }
-/* Media queries for responsiveness */
+
 @media screen and (min-width: 768px) {
   .card_container {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: 2rem;
+    gap: 1.25rem;
   }
 }
 
 @media screen and (min-width: 1024px) {
   .card_container {
     grid-template-columns: repeat(4, 1fr);
+  }
+
+  .icon {
+    display: flex;
+    justify-content: space-between; /* Position the icons at the ends of the cards */
+    align-items: center; /* Vertically align the icons and cards */
+    margin: 0 1rem;
   }
 }
