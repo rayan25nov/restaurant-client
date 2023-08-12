@@ -1,6 +1,6 @@
 import React from "react";
 import Styles from "./About.module.css";
-import Salad from "../assets/images/Salad.jpg";
+import Salad from "../assets/images/salad.jpg";
 
 const About = () => {
   return (
