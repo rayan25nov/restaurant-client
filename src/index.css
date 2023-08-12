@@ -9,6 +9,7 @@ body {
   padding: 0;
   box-sizing: border-box;
   background-color: var(--background-color);
+  font-family: "Raleway", sans-serif;
 }
 
 /* You can add additional global styles here */

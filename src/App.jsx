@@ -3,6 +3,7 @@ import Home from "./common/Home";
 import Navbar from "./common/Navbar";
 import About from "./about/About";
 import Meals from "./menu/Meals";
+import Review from "./reviews/Review";
 
 function App() {
   return (
@@ -11,6 +12,7 @@ function App() {
       <Home />
       <Meals />
       <About />
+      <Review />
     </div>
   );
 }

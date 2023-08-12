@@ -11,11 +11,15 @@ const About = () => {
       <div className={Styles.main}>
         <h3>Welcome to our SavoryEats Restaurants</h3>
         <p>
-          food, substance consisting essentially of protein, carbohydrate, fat,
-          and other nutrients used in the body of an organism to sustain growth
-          and vital processes and to furnish energy. The absorption and
-          utilization of food by the body is fundamental to nutrition and is
-          facilitated by digestion
+          Welcome to SavoryEats, where innovation meets culinary excellence.
+          With a passion for hospitality and a commitment to seamless dining
+          experiences, we've crafted a digital platform that empowers both
+          diners and restaurateurs. Our system seamlessly orchestrates
+          reservations, streamlines orders, and enhances communication between
+          patrons and kitchen, all while celebrating the artistry of gastronomy.
+          Discover a new era of dining where technology and taste converge
+          harmoniously, promising an unforgettable journey through flavors,
+          convenience, and the joy of shared moments.
         </p>
         <button>Find More About Us</button>
       </div>

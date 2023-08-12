@@ -9,7 +9,7 @@ const Card = (props) => {
           <img src={props.img} alt="Cuisine" />
           <figcaption>{props.caption}</figcaption>
         </figure>
-        <p>{props.description}</p>
+        <p className={Styles.description}>{props.description}</p>
       </a>
     </div>
   );
