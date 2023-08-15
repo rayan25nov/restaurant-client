@@ -42,12 +42,29 @@
 
 .subscribeButton {
   padding: 0.75rem 1.25rem;
-  border-radius: 0 0.3rem 0.3rem 0;
+  border-radius: 0 0.5rem 0.5rem 0;
   height: 3.5rem;
 }
 
 @media screen and (max-width: 768px) {
-
+  .connectContainer {
+    padding: 1rem 0;
+  }
+  .connectSection {
+    padding: 1rem;
+    margin: 0;
+    height: 20rem;
+    border-radius: 0;
+  }
+  .subscribeForm{
+    height: 2rem;
+  }
+  .emailInput{
+    height: 1.5rem;
+  }
+  .subscribeButton{
+    height: 3rem;
+  }
 }
 
 .footer {
