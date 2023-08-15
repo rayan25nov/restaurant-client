@@ -23,12 +23,7 @@
 }
 
 .text_section button {
-  padding: 1rem 2rem;
   font-size: 1.2rem;
-  background-color: #64e952;
-  border: none;
-  border-radius: 0.25rem;
-  cursor: pointer;
 }
 
 .image_section {
@@ -83,10 +78,6 @@
 
   .text_section p {
     font-size: 1.2rem;
-  }
-
-  .text_section button {
-    font-size: 1rem;
   }
 
   .image_section {

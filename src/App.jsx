@@ -4,6 +4,7 @@ import Navbar from "./common/Navbar";
 import About from "./about/About";
 import Meals from "./menu/Meals";
 import Review from "./reviews/Review";
+import Connect from "./connect/Connect";
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
       <Meals />
       <About />
       <Review />
+      <Connect />
     </div>
   );
 }

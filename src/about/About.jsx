@@ -9,9 +9,9 @@ const About = () => {
         <img src={Salad} alt="Salad" />
       </div>
       <div className={Styles.main}>
-        <h3>Welcome to our SavoryEats Restaurants</h3>
+        <h3>Welcome to our Delight Dine Restaurants</h3>
         <p>
-          Welcome to SavoryEats, where innovation meets culinary excellence.
+          Welcome to Delight Dine, where innovation meets culinary excellence.
           With a passion for hospitality and a commitment to seamless dining
           experiences, we've crafted a digital platform that empowers both
           diners and restaurateurs. Our system seamlessly orchestrates
@@ -21,7 +21,7 @@ const About = () => {
           harmoniously, promising an unforgettable journey through flavors,
           convenience, and the joy of shared moments.
         </p>
-        <button>Find More About Us</button>
+        <button className={Styles.button}>Find More About Us</button>
       </div>
     </div>
   );
