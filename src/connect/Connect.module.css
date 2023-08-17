@@ -1,6 +1,6 @@
 /* Responsive CSS for Connect Component */
 .connectContainer {
-  padding: 4rem 0;
+  padding-top: 4rem;
 }
 
 .connectSection {
@@ -56,13 +56,13 @@
     height: 20rem;
     border-radius: 0;
   }
-  .subscribeForm{
+  .subscribeForm {
     height: 2rem;
   }
-  .emailInput{
+  .emailInput {
     height: 1.5rem;
   }
-  .subscribeButton{
+  .subscribeButton {
     height: 3rem;
   }
 }
