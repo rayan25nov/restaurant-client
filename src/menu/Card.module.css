@@ -1,12 +1,11 @@
 .card {
   justify-content: center;
   margin: 0.5rem;
-  padding: 1rem;
   border: 1px solid #ccc;
   border-radius: 0.5rem;
   background-color: #fff;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  font-family: serif;
+  height: 95%;
 }
 
 .card a {
@@ -27,6 +26,11 @@
 
 .card figcaption {
   margin-top: 0.5rem;
+  padding: 0.5rem;
   font-size: 1.5rem;
   font-weight: bold;
+}
+.description {
+  font-size: 1rem;
+  padding: 0 0.5rem;
 }

@@ -9,6 +9,12 @@ import pastaImage from "../assets/images/pasta.jpg";
 import Styles from "./Home.module.css"; // Import the CSS file for styling
 
 const Home = () => {
+   const scrollToMeals = () => {
+     // Scroll to the "Meals" component
+     const mealsComponent = document.getElementById("meals-component");
+     mealsComponent.scrollIntoView({ behavior: "smooth" });
+   };
+
   return (
     <div className={Styles.container}>
       <div className={Styles.text_section}>
@@ -17,7 +23,7 @@ const Home = () => {
           Pizza, Salad, Burger, Pasta, Sandwiches, Desserts, Roti Sabzi, Drinks
           and more
         </p>
-        <button>Find out more</button>
+        <button onClick={scrollToMeals}>Find out more</button>
       </div>
       <div className={Styles.image_section}>
         <img src={pastaImage} alt="Pasta on a plate" />
