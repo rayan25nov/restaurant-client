@@ -32,5 +32,33 @@
 }
 .description {
   font-size: 1rem;
-  padding: 0 0.5rem;
+  padding: 0 0 0.5rem 0;
+}
+
+.price {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  margin: 0.5rem;
+  padding: 0.3rem 0.7rem;
+  background-color: #64e952;
+  color: #fff;
+  border-radius: 0.25rem;
+  font-size: 1rem;
+}
+
+.rating {
+  display: flex;
+  align-items: center;
+  position: absolute;
+  bottom: 0;
+  padding-left: 0.25rem;
+  left: 0;
+  padding: 0.25rem 1rem;
+  font-size: 1rem;
+  color: #64e952; /* Set your desired color for the star icon and rating text */
+}
+
+.rating p {
+  margin-left: 0.25rem; /* Adjust the spacing between the star icon and rating text */
 }

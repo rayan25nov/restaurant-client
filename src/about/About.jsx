@@ -1,10 +1,11 @@
 import React from "react";
 import Styles from "./About.module.css";
 import Salad from "../assets/images/salad.jpg";
+import { Link } from "react-router-dom";
 
 const About = () => {
   return (
-    <div className={Styles.container}>
+    <div className={Styles.container} id="about-component">
       <div className={Styles.image}>
         <img src={Salad} alt="Salad" />
       </div>
@@ -21,7 +22,9 @@ const About = () => {
           harmoniously, promising an unforgettable journey through flavors,
           convenience, and the joy of shared moments.
         </p>
-        <button className={Styles.button}>Find More About Us</button>
+        <Link to="/aboutus">
+          <button className={Styles.button}>Find More About Us</button>
+        </Link>
       </div>
     </div>
   );

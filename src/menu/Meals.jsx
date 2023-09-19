@@ -1,15 +1,21 @@
 import { React, useState } from "react";
 import Card from "./Card.jsx";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faAnglesLeft, faAnglesRight } from "@fortawesome/free-solid-svg-icons";
+import {
+  faAnglesLeft,
+  faAnglesRight,
+  faMagnifyingGlass,
+} from "@fortawesome/free-solid-svg-icons";
 import menuItems from "./MenuItems.js";
 import Styles from "./Meals.module.css";
 
 const Meals = () => {
   const itemsPerPage = 4; // Number of items to show per page
+  //Defining which page to show
   const [currentPage, setCurrentPage] = useState(0);
-  const [showLoadMore, setShowLoadMore] = useState(true);
-
+  // Saving the state of input changes
+  const [searchTerm, setSearchTerm] = useState("");
+  // Calculating the total number of pages
   const totalPages = Math.ceil(menuItems.length / itemsPerPage);
 
   const handleNext = () => {
@@ -19,10 +25,15 @@ const Meals = () => {
   const handlePrev = () => {
     setCurrentPage((prevPage) => (prevPage - 1 + totalPages) % totalPages);
   };
+  // Filtering Items to see searched Item
+  const filteredItems = menuItems.filter((item) =>
+    item.caption.toLowerCase().includes(searchTerm.toLowerCase())
+  );
+  const displayedItems = searchTerm ? filteredItems : menuItems;
 
   const startIndex = currentPage * itemsPerPage;
   const endIndex = startIndex + itemsPerPage;
-  const visibleItems = menuItems.slice(startIndex, endIndex);
+  const visibleItems = displayedItems.slice(startIndex, endIndex);
 
   return (
     <div className={Styles.container} id="meals-component">
@@ -34,8 +45,15 @@ const Meals = () => {
           type="text"
           placeholder="Search for a meal..."
           className={Styles.search}
+          value={searchTerm}
+          onChange={(e) => setSearchTerm(e.target.value)}
         />
-        <button className={Styles.searchButton}>Search</button>
+        <button
+          className={Styles.searchButton}
+          onClick={() => setSearchTerm("")}
+        >
+          Clear
+        </button>
       </div>
       <div className={Styles.main}>
         <FontAwesomeIcon
@@ -52,6 +70,8 @@ const Meals = () => {
                 img={menuItem.img}
                 caption={menuItem.caption}
                 description={menuItem.description}
+                price={menuItem.price}
+                rating={menuItem.rating}
               />
             </div>
           ))}

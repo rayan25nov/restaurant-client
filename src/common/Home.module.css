@@ -4,6 +4,8 @@
   align-items: center;
   height: 90vh;
   padding-top: 1rem;
+  overflow-y: scroll;
+  scroll-behavior: smooth;
 }
 
 .text_section {

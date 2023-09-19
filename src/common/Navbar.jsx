@@ -9,6 +9,7 @@ import {
   faClipboardList,
 } from "@fortawesome/free-solid-svg-icons";
 import Styles from "./Navbar.module.css"; // Import your custom CSS file for styling
+import { Link } from "react-router-dom";
 
 const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -33,10 +34,12 @@ const Navbar = () => {
         <a href="#" className={Styles.navbar_link}>
           Orders
         </a>
-        <a href="#" className={Styles.navbar_link}>
+        <a href="#about-component" className={Styles.navbar_link}>
           About
         </a>
-        <button className={Styles.navbar_button}>Special Offer</button>
+        <Link to="/offers">
+          <button className={Styles.navbar_button}>Special Offer</button>
+        </Link>
         <div className={Styles.navbar_phone}>
           <FontAwesomeIcon icon={faPhone} className={Styles.navbar_icon} />
           <span className={Styles.navbar_text}>8507545405</span>
