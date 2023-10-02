@@ -1,0 +1,34 @@
+/* AllMeals.module.css */
+.cardContainer {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px; /* Adjust the gap as needed */
+  justify-content: center;
+  margin: 0.5rem;
+}
+
+/* Styles for the heading */
+.categoryTitle {
+  display: flex;
+  justify-content: center;
+  font-size: 2.5rem;
+  margin-bottom: 0.75rem;
+  color: #333; /* Adjust the color as needed */
+}
+
+.activeCard {
+  flex: 0 1 calc(30%); /* 3 cards per row, adjust width as needed */
+}
+
+/* Add media queries for responsiveness */
+@media (max-width: 768px) {
+  .activeCard {
+    flex: 0 1 calc(50% - 20px); /* 2 cards per row on smaller screens */
+  }
+}
+
+@media (max-width: 480px) {
+  .activeCard {
+    flex: 1 1 100%; /* 1 card per row on even smaller screens */
+  }
+}

@@ -28,9 +28,9 @@ const Navbar = () => {
       <div
         className={`${Styles.navbar_links} ${menuOpen ? `${Styles.open}` : ""}`}
       >
-        <a href="#" className={Styles.navbar_link}>
+        <Link to="allmeals" className={Styles.navbar_link}>
           Products
-        </a>
+        </Link>
         <a href="#" className={Styles.navbar_link}>
           Orders
         </a>

@@ -1,4 +1,31 @@
-import kadhaiPaneer from "../../assets/images/ka"
+import kadhaiPaneer from "../../assets/images/kadhai_paneer.jpg";
+import pizza from "../../assets/images/pizza.jpg";
+import chickenTikka from "../../assets/images/chicken_tikka.jpg";
+import biryani from "../../assets/images/biryani.jpg";
+import bbq from "../../assets/images/bbq.jpg";
+import friedFish from "../../assets/images/fried_fish.jpg";
+import friedRice from "../../assets/images/fried_rice.jpg";
+import noodles from "../../assets/images/noodles.jpg";
+import eggBenedict from "../../assets/images/egg_benedict.jpg";
+import pancakes from "../../assets/images/pancakes.jpg";
+import waffles from "../../assets/images/waffles.jpg";
+import frenchToast from "../../assets/images/french_toast.jpg";
+import cereal from "../../assets/images/cereal.jpg";
+import smoothies from "../../assets/images/smoothies.jpg";
+import avocadoToast from "../../assets/images/avocado_toast.jpg";
+import burritos from "../../assets/images/burritos.jpg";
+import croissants from "../../assets/images/croissants.jpg";
+import yogurt from "../../assets/images/yogurt.jpg";
+import chocolateCake from "../../assets/images/chocolate_cake.jpg";
+import iceCream from "../../assets/images/ice_cream.jpg";
+import cheeseCake from "../../assets/images/cheese_cake.jpg";
+import applePie from "../../assets/images/apple_pie.jpg";
+import brownies from "../../assets/images/brownies.jpg";
+import tiramisu from "../../assets/images/tiramisu.jpg";
+import macarons from "../../assets/images/macarons.jpg";
+import cremeBrulee from "../../assets/images/creme_brulee.jpg";
+import pannaCotta from "../../assets/images/panna_cotta.jpg";
+import gelato from "../../assets/images/gelato.jpg";
 const allItems = {
   mainDish: [
     {
@@ -65,18 +92,10 @@ const allItems = {
       price: "₹65",
       rating: "4.4",
     },
-    {
-      img: pancakes,
-      caption: "Pancake Bliss",
-      description:
-        "Start your day with fluffy pancakes, drizzled with syrup and topped with your favorite extras.",
-      price: "₹40",
-      rating: "4.4",
-    },
   ],
   breakFast: [
     {
-      img: "https://example.com/images/eggs_benedict.jpg",
+      img: eggBenedict,
       caption: "Eggs Benedict - A Classic Breakfast Treat!",
       description:
         "A traditional breakfast dish consisting of poached eggs served on English muffins with Canadian bacon and hollandaise sauce.",
@@ -84,7 +103,7 @@ const allItems = {
       rating: "4.9",
     },
     {
-      img: "https://example.com/images/pancakes.jpg",
+      img: pancakes,
       caption: "Fluffy and Delicious Pancakes!",
       description:
         "A popular breakfast dish consisting of flat cakes made from a batter of flour, milk, and eggs. Pancakes are often served with syrup, fruit, and whipped cream.",
@@ -92,7 +111,7 @@ const allItems = {
       rating: "4.8",
     },
     {
-      img: "https://example.com/images/waffles.jpg",
+      img: waffles,
       caption: "Crispy and Golden Brown Waffles!",
       description:
         "A popular breakfast dish consisting of a batter of flour, milk, and eggs that is cooked in a waffle iron. Waffles are often served with syrup, fruit, and whipped cream.",
@@ -100,7 +119,7 @@ const allItems = {
       rating: "4.7",
     },
     {
-      img: "https://example.com/images/french_toast.jpg",
+      img: frenchToast,
       caption: "Sweet and Savory French Toast!",
       description:
         "A popular breakfast dish consisting of slices of bread that are dipped in a batter of milk and eggs and then cooked in a pan. French toast is often served with syrup, fruit, and whipped cream.",
@@ -108,7 +127,7 @@ const allItems = {
       rating: "4.6",
     },
     {
-      img: "https://example.com/images/cereal.jpg",
+      img: cereal,
       caption: "Cereal - A Quick and Easy Breakfast Option!",
       description:
         "A popular breakfast food consisting of dried cereal grains that are eaten with milk or yogurt. Cereal is often served with fruit and nuts.",
@@ -116,7 +135,7 @@ const allItems = {
       rating: "4.5",
     },
     {
-      img: "https://example.com/images/smoothie.jpg",
+      img: smoothies,
       caption: "Smoothies - A Healthy and Nutritious Breakfast on the Go!",
       description:
         "A blended drink made with fruits, vegetables, and yogurt. Smoothies are a popular breakfast option because they are quick to make and easy to digest.",
@@ -124,7 +143,7 @@ const allItems = {
       rating: "4.4",
     },
     {
-      img: "https://example.com/images/avocado_toast.jpg",
+      img: avocadoToast,
       caption: "Avocado toast - A Trendy and Delicious Breakfast Option!",
       description:
         "Toast topped with mashed avocado, often seasoned with salt, pepper, and red pepper flakes. Avocado toast is a popular breakfast option because it is healthy and satisfying.",
@@ -132,7 +151,7 @@ const allItems = {
       rating: "4.3",
     },
     {
-      img: "https://example.com/images/breakfast_burrito.jpg",
+      img: burritos,
       caption: "Burritos - A Hearty and Flavorful Breakfast Option!",
       description:
         "A tortilla filled with scrambled eggs, cheese, and other breakfast ingredients, such as meat, vegetables, and salsa. Breakfast burritos are often served with sour cream and guacamole.",
@@ -140,7 +159,7 @@ const allItems = {
       rating: "4.2",
     },
     {
-      img: "https://example.com/images/croissants.jpg",
+      img: croissants,
       caption: "Croissants - A Flaky and Buttery Breakfast Treat!",
       description:
         "A pastry made from laminated dough. Croissants are often served with butter, jam, or chocolate. Croissants are a popular breakfast option because they are light and airy.",
@@ -148,7 +167,7 @@ const allItems = {
       rating: "4.1",
     },
     {
-      img: "https://example.com/images/yogurt_parfait.jpg",
+      img: yogurt,
       caption: "A Healthy and Layered Breakfast Option!",
       description:
         "A layered breakfast consisting of yogurt, fruit, granola, and nuts. Yogurt parfaits are a popular breakfast option because they are healthy and easy to make.",
@@ -156,9 +175,9 @@ const allItems = {
       rating: "4.0",
     },
   ],
-  Dessert: [
+  desserts: [
     {
-      img: "https://example.com/images/chocolate_cake.jpg",
+      img: chocolateCake,
       caption: "Chocolate Cake - A Decadent Delight!",
       description:
         "A rich and moist chocolate cake that is perfect for any occasion. This cake is often served with chocolate frosting and fresh berries.",
@@ -166,7 +185,7 @@ const allItems = {
       rating: "4.9",
     },
     {
-      img: "https://example.com/images/ice_cream_sundae.jpg",
+      img: iceCream,
       caption: "Ice Cream Sundae - A Classic Summer Treat!",
       description:
         "A bowl of ice cream topped with whipped cream, chocolate sauce, and a variety of toppings, such as nuts, sprinkles, and maraschino cherries",
@@ -174,7 +193,7 @@ const allItems = {
       rating: "4.8",
     },
     {
-      img: "https://example.com/images/cheesecake.jpg",
+      img: cheeseCake,
       caption: "Cheesecake - A Creamy and Delicious Dessert!",
       description:
         "A dessert consisting of a layer of cheesecake filling on top of a crust, such as a graham cracker crust or a cookie crust. Cheesecake is often served with fresh fruit or whipped cream",
@@ -182,7 +201,7 @@ const allItems = {
       rating: "4.7",
     },
     {
-      img: "https://example.com/images/apple_pie.jpg",
+      img: applePie,
       caption: "Apple Pie - A Classic American Dessert!",
       description:
         "A dessert consisting of a flaky pie crust filled with sliced apples and spices. Apple pie is often served with whipped cream or vanilla ice cream.",
@@ -190,7 +209,7 @@ const allItems = {
       rating: "4.6",
     },
     {
-      img: "https://example.com/images/brownie.jpg",
+      img: brownies,
       caption: "Fudgy and Delicious Brownies!",
       description:
         "A dense and rich chocolate dessert that is often served with ice cream or whipped cream. Brownies are often flavored with nuts, chocolate chips, or caramel.",
@@ -198,7 +217,7 @@ const allItems = {
       rating: "4.5",
     },
     {
-      img: "https://example.com/images/tiramisu.jpg",
+      img: tiramisu,
       caption: "Tiramisu - A Classic Italian Dessert!",
       description:
         "A coffee-flavored dessert made with ladyfingers dipped in espresso and layered with a creamy mascarpone filling. Tiramisu is often dusted with cocoa powder before serving.",
@@ -206,7 +225,7 @@ const allItems = {
       rating: "4.9",
     },
     {
-      img: "https://example.com/images/macaroons.jpg",
+      img: macarons,
       caption: "Macarons - Delicate and Colorful Cookies!",
       description:
         "A small, delicate cookie made with almond flour, egg whites, and sugar. Macarons are often filled with ganache, buttercream, or jam.",
@@ -214,7 +233,7 @@ const allItems = {
       rating: "4.8",
     },
     {
-      img: "https://example.com/images/creme_brulee.jpg",
+      img: cremeBrulee,
       caption: "Creme Brulee - A Classic French Dessert!",
       description:
         "A custard dessert with a hard caramel topping. Creme brulee is often flavored with vanilla or coffee.",
@@ -222,7 +241,7 @@ const allItems = {
       rating: "4.7",
     },
     {
-      img: "https://example.com/images/panna_cotta.jpg",
+      img: pannaCotta,
       caption: "Panna Cotta - A Creamy and Italian Dessert!",
       description:
         "A custard dessert made with cream, milk, and sugar. Panna cotta is often flavored with vanilla or other extracts.",
@@ -230,7 +249,7 @@ const allItems = {
       rating: "4.6",
     },
     {
-      img: "https://example.com/images/gelato.jpg",
+      img: gelato,
       caption: "Gelato - A Rich and Italian Ice Cream!",
       description:
         "A frozen dessert similar to ice cream, but made with less milk and more cream. Gelato is often flavored with fresh fruits and nuts.",
