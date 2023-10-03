@@ -8,7 +8,7 @@ import friedRice from "../../assets/images/fried_rice.jpg";
 import noodles from "../../assets/images/noodles.jpg";
 import eggBenedict from "../../assets/images/egg_benedict.jpg";
 import pancakes from "../../assets/images/pancakes.jpg";
-import waffles from "../../assets/images/waffles.jpg";
+import waffles from "../../assets/images/waffle.jpg";
 import frenchToast from "../../assets/images/french_toast.jpg";
 import cereal from "../../assets/images/cereal.jpg";
 import smoothies from "../../assets/images/smoothies.jpg";
