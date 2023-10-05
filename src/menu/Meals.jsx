@@ -65,7 +65,7 @@ const Meals = () => {
         />
         <div className={Styles.card_container}>
           {visibleItems.map((menuItem, index) => (
-            <div key={index} className={`${Styles.card} ${Styles.activeCard}`}>
+            <div key={index} className={`${Styles.activeCard}`}>
               <Card
                 img={menuItem.img}
                 caption={menuItem.caption}

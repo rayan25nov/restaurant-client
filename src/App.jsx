@@ -1,4 +1,18 @@
-import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import {
+  BrowserRouter as Router,
+  Route,
+  Routes,
+  useLocation,
+} from "react-router-dom";
+import { useLayoutEffect } from "react";
+
+const Wrapper = ({ children }) => {
+  const location = useLocation();
+  useLayoutEffect(() => {
+    document.documentElement.scrollTo(0, 0);
+  }, [location.pathname]);
+  return children;
+};
 // Routes
 import AboutUs from "./routes/about-us/AboutUs";
 import Offers from "./routes/offers/Offers";
@@ -9,13 +23,15 @@ function App() {
   return (
     <div>
       <Router>
-        <Routes>
-          <Route path="/" element={<AllComponent />} />
-          <Route path="/aboutus" element={<AboutUs />} />
-          <Route path="/offers" element={<Offers />} />
-          <Route path="/allmeals/:category" element={<AllMeals />} />
-          <Route path="/allmeals" element={<AllMeals />} />
-        </Routes>
+        <Wrapper>
+          <Routes>
+            <Route path="/" element={<AllComponent />} />
+            <Route path="/aboutus" element={<AboutUs />} />
+            <Route path="/offers" element={<Offers />} />
+            <Route path="/allmeals/:category" element={<AllMeals />} />
+            <Route path="/allmeals" element={<AllMeals />} />
+          </Routes>
+        </Wrapper>
       </Router>
     </div>
   );

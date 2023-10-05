@@ -17,6 +17,11 @@ const Navbar = () => {
   const toggleMenu = () => {
     setMenuOpen(!menuOpen);
   };
+  const scrollToAbout = () => {
+    // Scroll to the "Meals" component
+    const mealsComponent = document.getElementById("about-component");
+    mealsComponent.scrollIntoView({ behavior: "smooth" });
+  };
 
   return (
     <nav className={Styles.navbar}>
@@ -34,9 +39,9 @@ const Navbar = () => {
         <a href="#" className={Styles.navbar_link}>
           Orders
         </a>
-        <a href="#about-component" className={Styles.navbar_link}>
+        <div className={Styles.navbar_link} onClick={scrollToAbout}>
           About
-        </a>
+        </div>
         <Link to="/offers">
           <button className={Styles.navbar_button}>Special Offer</button>
         </Link>

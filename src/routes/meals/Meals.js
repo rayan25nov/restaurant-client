@@ -10,7 +10,7 @@ import eggBenedict from "../../assets/images/egg_benedict.jpg";
 import pancakes from "../../assets/images/pancakes.jpg";
 import waffles from "../../assets/images/waffle.jpg";
 import frenchToast from "../../assets/images/french_toast.jpg";
-import cereal from "../../assets/images/cereal.jpg";
+import cereals from "../../assets/images/cereal.jpg";
 import smoothies from "../../assets/images/smoothies.jpg";
 import avocadoToast from "../../assets/images/avocado_toast.jpg";
 import burritos from "../../assets/images/burritos.jpg";
@@ -127,7 +127,7 @@ const allItems = {
       rating: "4.6",
     },
     {
-      img: cereal,
+      img: cereals,
       caption: "Cereal - A Quick and Easy Breakfast Option!",
       description:
         "A popular breakfast food consisting of dried cereal grains that are eaten with milk or yogurt. Cereal is often served with fruit and nuts.",
