@@ -8,9 +8,9 @@ import friedRice from "/src/assets/images/fried_rice.jpg";
 import noodles from "/src/assets/images/noodles.jpg";
 import eggBenedict from "/src/assets/images/egg_benedict.jpg";
 import pancakes from "/src/assets/images/pancakes.jpg";
-import wafflesImage from "/src/assets/images/waffle.jpg";
+// import wafflesImage from "/src/assets/images/waffle.jpg";
 import frenchToast from "/src/assets/images/french_toast.jpg";
-import cerealImage from "/src/assets/images/cereal.jpg";
+// import cerealImage from "/src/assets/images/cereal.jpg";
 import smoothies from "/src/assets/images/smoothies.jpg";
 import avocadoToast from "/src/assets/images/avocado_toast.jpg";
 import burritos from "/src/assets/images/burritos.jpg";
@@ -110,14 +110,14 @@ const allItems = {
       price: "₹200",
       rating: "4.8",
     },
-    {
-      img: wafflesImage,
-      caption: "Crispy and Golden Brown Waffles!",
-      description:
-        "A popular breakfast dish consisting of a batter of flour, milk, and eggs that is cooked in a waffle iron. Waffles are often served with syrup, fruit, and whipped cream.",
-      price: "₹250",
-      rating: "4.7",
-    },
+    // {
+    //   img: wafflesImage,
+    //   caption: "Crispy and Golden Brown Waffles!",
+    //   description:
+    //     "A popular breakfast dish consisting of a batter of flour, milk, and eggs that is cooked in a waffle iron. Waffles are often served with syrup, fruit, and whipped cream.",
+    //   price: "₹250",
+    //   rating: "4.7",
+    // },
     {
       img: frenchToast,
       caption: "Sweet and Savory French Toast!",
@@ -126,14 +126,14 @@ const allItems = {
       price: "₹200",
       rating: "4.6",
     },
-    {
-      img: cerealImage,
-      caption: "Cereal - A Quick and Easy Breakfast Option!",
-      description:
-        "A popular breakfast food consisting of dried cereal grains that are eaten with milk or yogurt. Cereal is often served with fruit and nuts.",
-      price: "₹150",
-      rating: "4.5",
-    },
+    // {
+    //   img: cerealImage,
+    //   caption: "Cereal - A Quick and Easy Breakfast Option!",
+    //   description:
+    //     "A popular breakfast food consisting of dried cereal grains that are eaten with milk or yogurt. Cereal is often served with fruit and nuts.",
+    //   price: "₹150",
+    //   rating: "4.5",
+    // },
     {
       img: smoothies,
       caption: "Smoothies - A Healthy and Nutritious Breakfast on the Go!",
