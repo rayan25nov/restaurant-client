@@ -7,7 +7,4 @@ export default defineConfig({
   server: {
     port: 3000,
   },
-  resolve: {
-    extensions: [".js", ".jsx", ".json", ".css", ".jpg", ".png"], // Include image file extensions
-  },
 });
