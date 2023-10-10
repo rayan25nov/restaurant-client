@@ -1,15 +1,10 @@
 import { React, useState } from "react";
-import Card from "./Card.jsx";
+import SpecialMenuCard from "./SpecialMenuCard";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {
-  faAnglesLeft,
-  faAnglesRight,
-  faMagnifyingGlass,
-} from "@fortawesome/free-solid-svg-icons";
-import menuItems from "./MenuItems.js";
-import Styles from "./Meals.module.css";
-
-const Meals = () => {
+import { faAnglesLeft, faAnglesRight } from "@fortawesome/free-solid-svg-icons";
+import menuItems from "./SpecialMenuItems.js";
+import Styles from "./SpecialMeals.module.css";
+const SpecialMeals = () => {
   const itemsPerPage = 4; // Number of items to show per page
   //Defining which page to show
   const [currentPage, setCurrentPage] = useState(0);
@@ -66,7 +61,7 @@ const Meals = () => {
         <div className={Styles.card_container}>
           {visibleItems.map((menuItem, index) => (
             <div key={index} className={`${Styles.activeCard}`}>
-              <Card
+              <SpecialMenuCard
                 img={menuItem.img}
                 caption={menuItem.caption}
                 description={menuItem.description}
@@ -92,4 +87,4 @@ const Meals = () => {
   );
 };
 
-export default Meals;
+export default SpecialMeals;

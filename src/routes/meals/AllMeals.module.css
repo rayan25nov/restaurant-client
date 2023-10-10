@@ -1,30 +1,12 @@
-.cardContainer {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 20px; /* Adjust the gap as needed */
-  justify-content: center;
-  margin: 0.5rem;
-  margin-bottom: 2rem;
-}
-
-/* Styles for the heading */
-.categoryTitle {
-  display: flex;
-  justify-content: center;
-  font-size: 2.5rem;
-  margin-bottom: 0.75rem;
-  color: #333; /* Adjust the color as needed */
+.container {
+  margin-top: 1.5rem;
 }
 /* Styles for the search bar container */
 .searchBar {
-  display: contents;
+  display: flex;
   justify-content: center;
-  background-color: #fff;
-  border: 1px solid #ccc;
-  border-radius: 4px;
   overflow: hidden;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  transition: box-shadow 0.3s ease;
+  margin: 0.5rem;
 }
 
 /* Style for the search input */
@@ -38,6 +20,22 @@
 .searchButton {
   padding: 0.5rem 1rem;
   border-radius: 0 4px 4px 0;
+}
+.cardContainer {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px; /* Adjust the gap as needed */
+  justify-content: center;
+  margin: 2rem 0.5rem;
+}
+
+/* Styles for the heading */
+.categoryTitle {
+  display: flex;
+  justify-content: center;
+  font-size: 2.5rem;
+  margin-bottom: 0.75rem;
+  color: #333; /* Adjust the color as needed */
 }
 .activeCard {
   flex: 0 1 calc(22.5%); /* 4 cards per row, adjust width as needed */

@@ -26,6 +26,7 @@ import macarons from "../../assets/images/macarons.jpg";
 import cremeBrulee from "../../assets/images/creme_brulee.jpg";
 import pannaCotta from "../../assets/images/panna_cotta.jpg";
 import gelato from "../../assets/images/gelato.jpg";
+import pasta from "../../assets/images/pasta.jpg";
 const allItems = {
   mainDish: [
     {
@@ -101,6 +102,14 @@ const allItems = {
         "A traditional breakfast dish consisting of poached eggs served on English muffins with Canadian bacon and hollandaise sauce.",
       price: "₹300",
       rating: "4.9",
+    },
+    {
+      img: pasta,
+      caption: "Creamy Garlic Parmesan Pasta",
+      description:
+        "Indulge in a delightful culinary experience with our Creamy Garlic Parmesan Pasta",
+      price: "₹150",
+      rating: "4.7",
     },
     {
       img: pancakes,

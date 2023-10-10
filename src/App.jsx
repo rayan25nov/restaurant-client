@@ -14,7 +14,6 @@ const Wrapper = ({ children }) => {
   return children;
 };
 // Routes
-import AboutUs from "./routes/about-us/AboutUs";
 import Offers from "./routes/offers/Offers";
 import AllMeals from "./routes/meals/AllMeals";
 import Order from "./routes/orders/Orders";
@@ -29,7 +28,6 @@ function App() {
         <Wrapper>
           <Routes>
             <Route path="/" element={<Homepage />} />
-            <Route path="/aboutus" element={<AboutUs />} />
             <Route path="/offers" element={<Offers />} />
             <Route path="/allmeals/:category" element={<AllMeals />} />
             <Route path="/allmeals" element={<AllMeals />} />

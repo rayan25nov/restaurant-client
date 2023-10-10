@@ -36,9 +36,6 @@ const AllMeals = () => {
         </button>
       </div>
       <div className={Styles.cardContainer}>
-        {category && (
-          <h2 className={Styles.categoryTitle}>{category.toUpperCase()}</h2>
-        )}
         {filteredItems.map((menuItem, index) => (
           <div key={index} className={Styles.activeCard}>
             <AllMealsCard

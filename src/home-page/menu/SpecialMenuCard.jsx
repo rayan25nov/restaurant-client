@@ -1,10 +1,10 @@
 import { faStar } from "@fortawesome/free-solid-svg-icons";
 import React from "react";
-import Styles from "./Card.module.css";
+import Styles from "./SpecialMenuCard.module.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {} from "@fortawesome/free-solid-svg-icons";
 
-const Card = (props) => {
+const SpecialMenuCard = (props) => {
   return (
     <div className={Styles.card}>
       <a href="#">
@@ -23,4 +23,4 @@ const Card = (props) => {
   );
 };
 
-export default Card;
+export default SpecialMenuCard;
