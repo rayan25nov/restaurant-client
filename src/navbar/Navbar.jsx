@@ -17,11 +17,6 @@ const Navbar = () => {
   const toggleMenu = () => {
     setMenuOpen(!menuOpen);
   };
-  const scrollToAbout = () => {
-    // Scroll to the "Meals" component
-    const mealsComponent = document.getElementById("about-component");
-    mealsComponent.scrollIntoView({ behavior: "smooth" });
-  };
 
   return (
     <nav className={Styles.navbar}>
@@ -33,15 +28,15 @@ const Navbar = () => {
       <div
         className={`${Styles.navbar_links} ${menuOpen ? `${Styles.open}` : ""}`}
       >
+        <Link to="/" className={Styles.navbar_link}>
+          Home
+        </Link>
         <Link to="allmeals" className={Styles.navbar_link}>
           Products
         </Link>
-        <a href="#" className={Styles.navbar_link}>
+        <Link to="orders" className={Styles.navbar_link}>
           Orders
-        </a>
-        <div className={Styles.navbar_link} onClick={scrollToAbout}>
-          About
-        </div>
+        </Link>
         <Link to="/offers">
           <button className={Styles.navbar_button}>Special Offer</button>
         </Link>

@@ -1,0 +1,24 @@
+/* OrderItem.module.css */
+.orderItem {
+  border: 1px solid #ccc;
+  padding: 20px;
+  margin: 10px;
+  text-align: center;
+  width: 250px;
+}
+
+.orderItem h2 {
+  margin: 0;
+}
+
+.orderItem p {
+  margin: 10px 0;
+}
+
+.orderItem button {
+  background-color: #f44336;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  cursor: pointer;
+}

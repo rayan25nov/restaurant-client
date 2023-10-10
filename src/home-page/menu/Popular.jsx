@@ -2,10 +2,10 @@ import React from "react";
 import PopularCard from "./PopularCard";
 import { Link } from "react-router-dom";
 import Styles from "./Popular.module.css";
-import mainDish from "../assets/images/main_dish.png";
-import breakFast from "../assets/images/breakfast.png";
-import dessert from "../assets/images/dessert_caption.png";
-import browseAll from "../assets/images/browse_all.png";
+import mainDish from "../../assets/images/main_dish.png";
+import breakFast from "../../assets/images/breakfast.png";
+import dessert from "../../assets/images/dessert_caption.png";
+import browseAll from "../../assets/images/browse_all.png";
 
 const Popular = () => {
   return (

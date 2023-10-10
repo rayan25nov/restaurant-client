@@ -1,7 +1,6 @@
 import React from "react";
 import Styles from "./About.module.css";
-import Salad from "../assets/images/salad.jpg";
-import { Link } from "react-router-dom";
+import Salad from "../../assets/images/salad.jpg";
 
 const About = () => {
   return (
@@ -22,9 +21,6 @@ const About = () => {
           harmoniously, promising an unforgettable journey through flavors,
           convenience, and the joy of shared moments.
         </p>
-        <Link to="/aboutus">
-          <button className={Styles.button}>Find More About Us</button>
-        </Link>
       </div>
     </div>
   );

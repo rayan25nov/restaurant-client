@@ -1,60 +1,58 @@
-import React from "react";
+import React, { useState } from "react";
 import allItems from "./Meals";
-import { useNavigate, useParams } from "react-router-dom";
+import { useParams } from "react-router-dom";
 import Styles from "./AllMeals.module.css";
 import AllMealsCard from "./AllMealsCard";
 
 const AllMeals = () => {
-  // Get the category parameter from the route
+  const [searchTerm, setSearchTerm] = useState("");
   const { category } = useParams();
-  console.log(category);
-  const navigate = useNavigate();
 
-  // Check if the specified category exists in allItems
-  if (category) {
-    return (
-      <div>
-        <h2 className={Styles.categoryTitle}>{category.toUpperCase()}</h2>
-        <div className={Styles.cardContainer}>
-          {allItems[category].map((menuItem, index) => (
-            <div key={index} className={Styles.activeCard}>
-              <AllMealsCard
-                img={menuItem.img}
-                caption={menuItem.caption}
-                description={menuItem.description}
-                price={menuItem.price}
-                rating={menuItem.rating}
-              />
-            </div>
-          ))}
-        </div>
+  const filteredItems = category
+    ? allItems[category].filter((item) =>
+        item.caption.toLowerCase().includes(searchTerm.toLowerCase())
+      )
+    : Object.keys(allItems).flatMap((categoryName) =>
+        allItems[categoryName].filter((item) =>
+          item.caption.toLowerCase().includes(searchTerm.toLowerCase())
+        )
+      );
+
+  return (
+    <div className={Styles.container}>
+      <div className={Styles.searchBar}>
+        <input
+          type="text"
+          placeholder="Search for a meal..."
+          className={Styles.search}
+          value={searchTerm}
+          onChange={(e) => setSearchTerm(e.target.value)}
+        />
+        <button
+          className={Styles.searchButton}
+          onClick={() => setSearchTerm("")}
+        >
+          Clear
+        </button>
       </div>
-    );
-  } else {
-    // Handle the case when category doesn't exist
-    return (
-      <div>
-        {Object.keys(allItems).map((category) => (
-          <div key={category}>
-            <h2 className={Styles.categoryTitle}>{category.toUpperCase()}</h2>
-            <div className={Styles.cardContainer}>
-              {allItems[category].map((menuItem, index) => (
-                <div key={index} className={Styles.activeCard}>
-                  <AllMealsCard
-                    img={menuItem.img}
-                    caption={menuItem.caption}
-                    description={menuItem.description}
-                    price={menuItem.price}
-                    rating={menuItem.rating}
-                  />
-                </div>
-              ))}
-            </div>
+      <div className={Styles.cardContainer}>
+        {category && (
+          <h2 className={Styles.categoryTitle}>{category.toUpperCase()}</h2>
+        )}
+        {filteredItems.map((menuItem, index) => (
+          <div key={index} className={Styles.activeCard}>
+            <AllMealsCard
+              img={menuItem.img}
+              caption={menuItem.caption}
+              description={menuItem.description}
+              price={menuItem.price}
+              rating={menuItem.rating}
+            />
           </div>
         ))}
       </div>
-    );
-  }
+    </div>
+  );
 };
 
 export default AllMeals;

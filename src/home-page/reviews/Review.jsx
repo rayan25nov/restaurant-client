@@ -1,7 +1,7 @@
 import React from "react";
 import ReviewCard from "./ReviewCard";
-import Profile1 from "../assets/images/profile_1.jpg";
-import Profile2 from "../assets/images/profile_2.jpg";
+import Profile1 from "../../assets/images/profile_1.jpg";
+import Profile2 from "../../assets/images/profile_2.jpg";
 import Styles from "./Review.module.css";
 
 const Review = () => {

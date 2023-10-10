@@ -5,7 +5,7 @@ import {
   faFacebook,
   faInstagram,
 } from "@fortawesome/free-brands-svg-icons";
-import pastaImage from "../assets/images/pasta.jpg";
+import pastaImage from "../../assets/images/pasta.jpg";
 import Styles from "./Home.module.css"; // Import the CSS file for styling
 
 const Home = () => {

@@ -1,15 +1,15 @@
-import kadhaiPaneer from "../assets/images/kadhai_paneer.jpg";
-import pizza from "../assets/images/pizza.jpg";
-import chickenTikka from "../assets/images/chicken_tikka.jpg";
-import biryani from "../assets/images/biryani.jpg";
-import bbq from "../assets/images/bbq.jpg";
-import burgers from "../assets/images/burgers.jpg";
-import dessert from "../assets/images/dessert.jpg";
-import iceCream from "../assets/images/ice_cream.jpg";
-import friedFish from "../assets/images/fried_fish.jpg";
-import friedRice from "../assets/images/fried_rice.jpg";
-import noodles from "../assets/images/noodles.jpg";
-import pancakes from "../assets/images/pancakes.jpg";
+import kadhaiPaneer from "../../assets/images/kadhai_paneer.jpg";
+import pizza from "../../assets/images/pizza.jpg";
+import chickenTikka from "../../assets/images/chicken_tikka.jpg";
+import biryani from "../../assets/images/biryani.jpg";
+import bbq from "../../assets/images/bbq.jpg";
+import burgers from "../../assets/images/burgers.jpg";
+import dessert from "../../assets/images/dessert.jpg";
+import iceCream from "../../assets/images/ice_cream.jpg";
+import friedFish from "../../assets/images/fried_fish.jpg";
+import friedRice from "../../assets/images/fried_rice.jpg";
+import noodles from "../../assets/images/noodles.jpg";
+import pancakes from "../../assets/images/pancakes.jpg";
 
 const menuItems = [
   {
