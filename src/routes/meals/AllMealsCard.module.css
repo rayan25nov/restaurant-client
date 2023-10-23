@@ -14,6 +14,29 @@
 .card:hover {
   transform: translateY(-0.5rem);
 }
+.availContatent {
+  justify-content: flex-end;
+  display: flex;
+  position: relative;
+}
+.availItems {
+  display: flex;
+  background-color: #64e952;
+  align-items: baseline;
+  width: 4.5rem;
+  height: 2rem;
+  align-items: center;
+  padding: 0.2rem;
+  position: absolute;
+  top: 11rem;
+  left: 5rem;
+  border-radius: 0.25rem;
+}
+.availItems p {
+  font-size: 1rem;
+  padding: 0rem;
+  color: black;
+}
 
 .card figure {
   margin: 0;

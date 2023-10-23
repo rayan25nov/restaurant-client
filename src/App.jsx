@@ -19,10 +19,13 @@ import AllMeals from "./routes/meals/AllMeals";
 import Order from "./routes/orders/Orders";
 import Navbar from "./navbar/Navbar";
 import Homepage from "./home-page/Homepage";
+import Cart from "./routes/cart/Cart";
+import { ToastContainer } from "react-toastify";
 
 function App() {
   return (
     <div>
+      <ToastContainer />
       <Router>
         <Navbar />
         <Wrapper>
@@ -32,6 +35,7 @@ function App() {
             <Route path="/allmeals/:category" element={<AllMeals />} />
             <Route path="/allmeals" element={<AllMeals />} />
             <Route path="orders" element={<Order />} />
+            <Route path="cart" element={<Cart />} />
           </Routes>
         </Wrapper>
       </Router>

@@ -37,8 +37,9 @@ const AllMeals = () => {
       </div>
       <div className={Styles.cardContainer}>
         {filteredItems.map((menuItem, index) => (
-          <div key={index} className={Styles.activeCard}>
+          <div key={menuItem.id} className={Styles.activeCard}>
             <AllMealsCard
+              id={menuItem.id}
               img={menuItem.img}
               caption={menuItem.caption}
               description={menuItem.description}

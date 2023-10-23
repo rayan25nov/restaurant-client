@@ -2,6 +2,7 @@
 import React from "react";
 import styles from "./Offers.module.css";
 import OfferData from "./OfferData";
+import { Link } from "react-router-dom";
 
 const Offers = () => {
   return (
@@ -14,7 +15,7 @@ const Offers = () => {
             <div className={styles.content}>
               <h2 className={styles.cardTitle}>{offer.title}</h2>
               <p className={styles.description}>{offer.description}</p>
-              <button className={styles.button}>Order Now</button>
+                <button className={styles.button}>Order Now</button>
             </div>
           </div>
         ))}

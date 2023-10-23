@@ -20,10 +20,12 @@ const Navbar = () => {
 
   return (
     <nav className={Styles.navbar}>
-      <div className={Styles.navbar_brand}>
-        <FontAwesomeIcon icon={faUtensils} className={Styles.navbar_icon} />
-        <span className={Styles.navbar_text}>Delight Dine</span>
-      </div>
+      <Link to="/" className={Styles.navbar_link}>
+        <div className={Styles.navbar_brand}>
+          <FontAwesomeIcon icon={faUtensils} className={Styles.navbar_icon} />
+          <span className={Styles.navbar_text}>Delight Dine</span>
+        </div>
+      </Link>
 
       <div
         className={`${Styles.navbar_links} ${menuOpen ? `${Styles.open}` : ""}`}
@@ -52,12 +54,14 @@ const Navbar = () => {
             icon={faClipboardList}
             className={Styles.navbar_icon}
           />
-          <span className={Styles.navbar_text}>5</span>
-          <FontAwesomeIcon
-            icon={faShoppingCart}
-            className={Styles.navbar_icon}
-          />
-          <span className={Styles.navbar_text}>2</span>
+          <span className={Styles.navbar_text}>0</span>
+          <Link to="cart">
+            <FontAwesomeIcon
+              icon={faShoppingCart}
+              className={Styles.navbar_icon}
+            />
+          </Link>
+          <span className={Styles.navbar_text}>0</span>
         </div>
       </div>
       <div className={Styles.navbar_toggle} onClick={toggleMenu}>
