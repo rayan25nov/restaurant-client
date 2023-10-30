@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import allItems from "./Meals";
+import allItems from "./Meals-v2";
 import { useParams } from "react-router-dom";
 import Styles from "./AllMeals.module.css";
 import AllMealsCard from "./AllMealsCard";

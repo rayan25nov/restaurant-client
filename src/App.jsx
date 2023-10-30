@@ -24,7 +24,7 @@ import { ToastContainer } from "react-toastify";
 
 function App() {
   return (
-    <div>
+    <>
       <ToastContainer />
       <Router>
         <Navbar />
@@ -34,12 +34,12 @@ function App() {
             <Route path="/offers" element={<Offers />} />
             <Route path="/allmeals/:category" element={<AllMeals />} />
             <Route path="/allmeals" element={<AllMeals />} />
-            <Route path="orders" element={<Order />} />
-            <Route path="cart" element={<Cart />} />
+            <Route path="/orders" element={<Order />} />
+            <Route path="/cart" element={<Cart />} />
           </Routes>
         </Wrapper>
       </Router>
-    </div>
+    </>
   );
 }
 

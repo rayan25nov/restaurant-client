@@ -1,8 +1,11 @@
 import React from "react";
 import Styles from "./Cart.module.css";
 import CartItem from "./CartItem";
+import { useSelector } from "react-redux";
 
-const Cart = ({ cartItems, updateQuantity, removeItem }) => {
+const Cart = ({ updateQuantity, removeItem }) => {
+  const cartItems = useSelector((state) => state.cart.items);
+  console.log(cartItems);
   if (!cartItems || cartItems.length === 0) {
     return (
       <div className={Styles.cartContainer}>
@@ -33,7 +36,7 @@ const Cart = ({ cartItems, updateQuantity, removeItem }) => {
         ))}
       </div>
       <div className={Styles.cartTotal}>
-        <p>Total: ${calculateTotal()}</p>
+        <p>Total: ₹{calculateTotal()}</p>
       </div>
     </div>
   );

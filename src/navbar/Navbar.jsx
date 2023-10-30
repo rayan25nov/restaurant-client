@@ -10,6 +10,7 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 import Styles from "./Navbar.module.css"; // Import your custom CSS file for styling
 import { Link } from "react-router-dom";
+import { useSelector } from "react-redux";
 
 const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -17,6 +18,7 @@ const Navbar = () => {
   const toggleMenu = () => {
     setMenuOpen(!menuOpen);
   };
+  const cartItems = useSelector((state) => state.cart.items);
 
   return (
     <nav className={Styles.navbar}>
@@ -61,7 +63,9 @@ const Navbar = () => {
               className={Styles.navbar_icon}
             />
           </Link>
-          <span className={Styles.navbar_text}>0</span>
+          <span className={Styles.navbar_text}>
+            {cartItems.length ? cartItems.length : 0}
+          </span>
         </div>
       </div>
       <div className={Styles.navbar_toggle} onClick={toggleMenu}>
