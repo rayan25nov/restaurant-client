@@ -2,15 +2,16 @@ import React from "react";
 import Styles from "./AllMealsCard.module.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faStar } from "@fortawesome/free-solid-svg-icons";
-import { AdvancedImage } from "@cloudinary/react";
-import { useDispatch } from "react-redux";
-import { addItem } from "../../redux/slices/cartSlice";
+// import { AdvancedImage } from "@cloudinary/react";
+import { useDispatch, useSelector } from "react-redux";
 import "react-toastify/dist/ReactToastify.min.css";
 import { toast } from "react-toastify";
+import { addItem } from "../../redux/slices/cartSlice";
 import allItems from "./Meals-v2";
 
 const AllMealsCard = (props) => {
   const dispatch = useDispatch();
+  const cart = useSelector((state) => state.cart.items);
 
   const handleAddToCart = (itemId) => {
     console.log(itemId);
@@ -24,12 +25,20 @@ const AllMealsCard = (props) => {
         }
       }
     }
-    console.log(newItem);
-    dispatch(addItem(newItem));
-    toast.success("Food item added to your cart!", {
-      position: "top-right",
-      autoClose: 2000,
-    });
+    const isDuplicate = cart.some((item) => item.id === itemId);
+    if (isDuplicate) {
+      toast.success("This item is already in your cart.", {
+        position: "bottom-center",
+        autoClose: 1000,
+      });
+      return;
+    } else {
+      dispatch(addItem(newItem));
+      toast.success("Food item added to your cart!", {
+        position: "top-right",
+        autoClose: 1000,
+      });
+    }
   };
   return (
     <div className={Styles.card} onClick={() => handleAddToCart(props.id)}>
@@ -49,7 +58,7 @@ const AllMealsCard = (props) => {
       </figure>
       <p className={Styles.description}>{props.description}</p>
       <div className={Styles.divider}>
-        <h3 className={Styles.price}>{props.price}</h3>
+        <h3 className={Styles.price}>₹{props.price}</h3>
         <div className={Styles.rating}>
           <FontAwesomeIcon icon={faStar} />
           <p>{props.rating}</p>

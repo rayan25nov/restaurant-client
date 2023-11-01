@@ -73,14 +73,12 @@
   background-color: #fff;
   overflow: hidden;
   margin: 0 0.15rem;
-  opacity: 0.9;
   transform: scale(0.9);
 }
 .activeCard:hover {
   background-color: #f1f1f1; /* Change the background color of the active card */
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add a shadow on hover */
-  transform: scale(1); /* Scale up the card on hover */
-  opacity: 1; /* Fully visible on hover */
+  transform: scale(0.91); /* Scale up the card on hover */
 }
 /* Restyle the arrows on hover */
 .icon:hover {

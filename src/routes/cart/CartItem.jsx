@@ -1,30 +1,39 @@
 import React from "react";
 import Styles from "./CartItem.module.css";
-
-const CartItem = ({ item, updateQuantity, removeItem }) => {
+import { removeItem, updateQuantity } from "../../redux/slices/cartSlice";
+import { useDispatch } from "react-redux";
+const CartItem = ({ item }) => {
+  const dispatch = useDispatch();
   return (
     <div className={Styles.cartItem}>
       <div className={Styles.itemInfo}>
         <img src={item.img} alt={item.caption} />
         <h4>{item.caption}</h4>
-        <p>Price: {item.price}</p>
+        <p>Price: ₹{item.newPrice ? item.newPrice : item.price}</p>
         <div className={Styles.quantityControl}>
           <button
-            onClick={() => updateQuantity(item.id, -1)}
+            onClick={() =>
+              dispatch(updateQuantity({ id: item.id, quantity: -1 }))
+            } // Decrease quantity
             className={Styles.quantityControlButton}
           >
             -
           </button>
-          <span>{/* {item.quantity} */}1</span>
+          <span>{item.quantity}</span> {/* Display the item's quantity */}
           <button
-            onClick={() => updateQuantity(item.id, 1)}
+            onClick={() =>
+              dispatch(updateQuantity({ id: item.id, quantity: 1 }))
+            } // Increase quantity
             className={Styles.quantityControlButton}
           >
             +
           </button>
         </div>
       </div>
-      <button onClick={() => removeItem(item.id)} className={Styles.removeItem}>
+      <button
+        onClick={() => dispatch(removeItem(item.id))}
+        className={Styles.removeItem}
+      >
         Remove
       </button>
     </div>

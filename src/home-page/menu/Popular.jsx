@@ -6,7 +6,7 @@ import mainDish from "../../assets/images/main_dish.png";
 import breakFast from "../../assets/images/breakfast.png";
 import dessert from "../../assets/images/dessert_caption.png";
 import browseAll from "../../assets/images/browse_all.png";
-import allItems from "../../routes/meals/Meals.js";
+import allItems from "../../routes/meals/Meals-v2";
 
 const Popular = () => {
   const numberOfMainDish = allItems.mainDish.length;

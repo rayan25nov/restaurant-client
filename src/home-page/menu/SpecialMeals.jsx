@@ -62,6 +62,7 @@ const SpecialMeals = () => {
           {visibleItems.map((menuItem, index) => (
             <div key={index} className={`${Styles.activeCard}`}>
               <SpecialMenuCard
+                id={menuItem.id}
                 img={menuItem.img}
                 caption={menuItem.caption}
                 description={menuItem.description}

@@ -3,7 +3,7 @@ import Styles from "./Cart.module.css";
 import CartItem from "./CartItem";
 import { useSelector } from "react-redux";
 
-const Cart = ({ updateQuantity, removeItem }) => {
+const Cart = ({ updateQuantity }) => {
   const cartItems = useSelector((state) => state.cart.items);
   console.log(cartItems);
   if (!cartItems || cartItems.length === 0) {
@@ -27,12 +27,7 @@ const Cart = ({ updateQuantity, removeItem }) => {
       <h2>Your Cart</h2>
       <div className={Styles.cartItems}>
         {cartItems.map((item) => (
-          <CartItem
-            key={item.id}
-            item={item}
-            updateQuantity={updateQuantity}
-            removeItem={removeItem}
-          />
+          <CartItem item={item} />
         ))}
       </div>
       <div className={Styles.cartTotal}>
