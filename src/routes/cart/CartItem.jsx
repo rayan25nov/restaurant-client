@@ -7,9 +7,11 @@ const CartItem = ({ item }) => {
   return (
     <div className={Styles.cartItem}>
       <div className={Styles.itemInfo}>
-        <img src={item.img} alt={item.caption} />
+        <img src={item.img} alt={item.caption} className={Styles.image}/>
         <h4>{item.caption}</h4>
         <p>Price: ₹{item.newPrice ? item.newPrice : item.price}</p>
+      </div>
+      <div className={Styles.buttons}>
         <div className={Styles.quantityControl}>
           <button
             onClick={() =>
@@ -29,13 +31,13 @@ const CartItem = ({ item }) => {
             +
           </button>
         </div>
+        <button
+          onClick={() => dispatch(removeItem(item.id))}
+          className={Styles.removeItem}
+        >
+          Remove
+        </button>
       </div>
-      <button
-        onClick={() => dispatch(removeItem(item.id))}
-        className={Styles.removeItem}
-      >
-        Remove
-      </button>
     </div>
   );
 };
