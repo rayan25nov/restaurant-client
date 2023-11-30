@@ -6,6 +6,7 @@ import {
   faFacebook,
   faInstagram,
 } from "@fortawesome/free-brands-svg-icons";
+import { Link } from "react-router-dom";
 
 const Footer = () => {
   return (
@@ -13,50 +14,36 @@ const Footer = () => {
       <div className={Styles.footerLinks}>
         <ul>
           <li>
-            <a href="#">About us</a>
+            <Link to={"/aboutus"}>About us</Link>
           </li>
           <li>
-            <a href="#">Terms of Use</a>
+            <Link to={"/termsofuse"}>Terms of Use</Link>
           </li>
           <li>
-            <a href="#">Our services</a>
+            <Link to={"/ourservices"}>Our services</Link>
           </li>
           <li>
-            <a href="#">Privacy policy</a>
-          </li>
-          <li>
-            <a href="#">Contact Us</a>
+            <Link to={"/privacypolicy"}>Privacy policy</Link>
           </li>
         </ul>
       </div>
       <div className={Styles.footerLinks}>
         <ul>
           <li>
-            <a href="#">FAQ</a>
+            <Link to={"/security"}>Security</Link>
           </li>
           <li>
-            <a href="#">Security</a>
+            <Link to={"/paymentoptions"}>Payment options</Link>
           </li>
           <li>
-            <a href="#">returns</a>
+            <Link to={"/advertise"}>Advertise With Us</Link>
           </li>
           <li>
-            <a href="#">Cookies</a>
-          </li>
-          <li>
-            <a href="#">Payment options</a>
+            <Link to={"adsinfo"}>Ads Info</Link>
           </li>
         </ul>
       </div>
       <div className={Styles.footerLinks}>
-        <ul>
-          <li>
-            <a href="#">Advertise with Us</a>
-          </li>
-          <li>
-            <a href="#">Ads Info</a>
-          </li>
-        </ul>
         <div className={Styles.SocialLinks}>
           <div className={Styles.social_icons}>
             <div className={Styles.icon}>

@@ -41,7 +41,7 @@ const Navbar = () => {
         <Link to="orders" className={Styles.navbar_link}>
           Orders
         </Link>
-        <Link to="/offers">
+        <Link to="offers">
           <button className={Styles.navbar_button}>Special Offer</button>
         </Link>
         <div className={Styles.navbar_phone}>
