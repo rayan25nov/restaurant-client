@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import PopularCard from "./PopularCard";
 import { Link } from "react-router-dom";
 import Styles from "./Popular.module.css";
@@ -6,14 +6,46 @@ import mainDish from "../../assets/images/main_dish.png";
 import breakFast from "../../assets/images/breakfast.png";
 import dessert from "../../assets/images/dessert_caption.png";
 import browseAll from "../../assets/images/browse_all.png";
-import allItems from "../../routes/meals/Meals-v2";
+import veg from "../../assets/images/veg.png";
+import nonVeg from "../../assets/images/non-veg.png";
+import axios from "axios";
 
 const Popular = () => {
-  const numberOfMainDish = allItems.mainDish.length;
-  const numberOfBreakFast = allItems.breakFast.length;
-  const numberOfDessert = allItems.desserts.length;
-  const numberOfBrowseAll =
-    numberOfMainDish + numberOfBreakFast + numberOfDessert;
+  const [mainDishLen, setMainDishLen] = useState();
+  const [breakFastLen, setBreakFastLen] = useState();
+  const [dessertLen, setDessertLen] = useState();
+  const [browseAllLen, setBrowseAllLen] = useState();
+  const [vegLen, setVegLen] = useState();
+  const [nonVegLen, setNonVegLen] = useState();
+
+  const fetchData = async () => {
+    const url = import.meta.env.VITE_API_URL;
+    const mainDishUrl = `${url}/products/category/mainDish`;
+    const breakFastUrl = `${url}/products/category/breakFast`;
+    const dessertUrl = `${url}/products/category/desserts`;
+    const vegUrl = `${url}/products/type/veg`;
+    const nonVegUrl = `${url}/products/type/non veg`;
+
+    const { data: mainDishRes } = await axios.get(mainDishUrl);
+    const { data: breakFastRes } = await axios.get(breakFastUrl);
+    const { data: dessertRes } = await axios.get(dessertUrl);
+    const { data: vegRes } = await axios.get(vegUrl);
+    const { data: nonVegRes } = await axios.get(nonVegUrl);
+    setMainDishLen(mainDishRes.data.length);
+    setBreakFastLen(breakFastRes.data.length);
+    setDessertLen(dessertRes.data.length);
+    setVegLen(vegRes.data.length);
+    setNonVegLen(nonVegRes.data.length);
+    setBrowseAllLen(
+      mainDishRes.data.length +
+        breakFastRes.data.length +
+        dessertRes.data.length
+    );
+  };
+  useEffect(() => {
+    fetchData();
+  }, []);
+
   return (
     <div className={Styles.Popular}>
       <h2>CUSTOMER FAVORITES</h2>
@@ -23,7 +55,7 @@ const Popular = () => {
           <PopularCard
             img={mainDish}
             name="Main Dish"
-            number={numberOfMainDish}
+            number={mainDishLen}
             alt="dish"
           />
         </Link>
@@ -31,7 +63,7 @@ const Popular = () => {
           <PopularCard
             img={breakFast}
             name="Breakfast"
-            number={numberOfBreakFast}
+            number={breakFastLen}
             alt="dish"
           />
         </Link>
@@ -39,7 +71,18 @@ const Popular = () => {
           <PopularCard
             img={dessert}
             name="Dessert"
-            number={numberOfDessert}
+            number={dessertLen}
+            alt="dish"
+          />
+        </Link>
+        <Link to="/allmeals/veg" className={Styles.link}>
+          <PopularCard img={veg} name="Vegetarian" number={vegLen} alt="dish" />
+        </Link>
+        <Link to="/allmeals/non veg" className={Styles.link}>
+          <PopularCard
+            img={nonVeg}
+            name="Non Veg"
+            number={nonVegLen}
             alt="dish"
           />
         </Link>
@@ -47,7 +90,7 @@ const Popular = () => {
           <PopularCard
             img={browseAll}
             name="Browse All"
-            number={numberOfBrowseAll}
+            number={browseAllLen}
             alt="dish"
           />{" "}
         </Link>

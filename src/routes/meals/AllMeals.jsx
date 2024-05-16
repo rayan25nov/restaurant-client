@@ -1,22 +1,41 @@
-import React, { useState } from "react";
-import allItems from "./Meals-v2";
+import React, { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import Styles from "./AllMeals.module.css";
 import AllMealsCard from "./AllMealsCard";
+import axios from "axios";
 
 const AllMeals = () => {
   const [searchTerm, setSearchTerm] = useState("");
+  const [items, setItems] = useState([]);
   const { category } = useParams();
 
-  const filteredItems = category
-    ? allItems[category].filter((item) =>
-        item.caption.toLowerCase().includes(searchTerm.toLowerCase())
-      )
-    : Object.keys(allItems).flatMap((categoryName) =>
-        allItems[categoryName].filter((item) =>
-          item.caption.toLowerCase().includes(searchTerm.toLowerCase())
-        )
-      );
+  const fetchItems = async () => {
+    const url = import.meta.env.VITE_API_URL;
+    let apiUrl;
+    if (!category) {
+      apiUrl = `${url}/products`;
+    } else if (category === "veg") {
+      apiUrl = `${url}/products/type/veg`;
+    } else if (category === "non veg") {
+      apiUrl = `${url}/products/type/non veg`;
+    } else {
+      apiUrl = `${url}/products/category/${category}`;
+    }
+    const { data: res } = await axios.get(apiUrl);
+    setItems(res.data);
+  };
+
+  useEffect(() => {
+    fetchItems();
+  }, []);
+
+  if (items.length === 0) {
+    return <div>Loading...</div>;
+  }
+
+  const filteredItems = items.filter((item) =>
+    item.caption.toLowerCase().includes(searchTerm.toLowerCase())
+  );
 
   return (
     <div className={Styles.container}>
@@ -36,11 +55,11 @@ const AllMeals = () => {
         </button>
       </div>
       <div className={Styles.cardContainer}>
-        {filteredItems.map((menuItem, index) => (
-          <div key={menuItem.id} className={Styles.activeCard}>
+        {filteredItems.map((menuItem) => (
+          <div key={menuItem._id} className={Styles.activeCard}>
             <AllMealsCard
-              id={menuItem.id}
-              img={menuItem.img}
+              id={menuItem._id}
+              img={menuItem.image}
               caption={menuItem.caption}
               description={menuItem.description}
               price={menuItem.price}

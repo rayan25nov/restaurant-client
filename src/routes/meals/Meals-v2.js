@@ -38,9 +38,9 @@ const allItems = {
       img: kadhaiPaneer,
       caption: "Kadhai Paneer - A Flavorful Delight!",
       description:
-        "A fragrant Indian vegetarian delight featuring paneer (cottage cheese) cooked with aromatic spices in a traditional wok.",
+        "Indulge in the rich and aromatic flavors of this exquisite Indian vegetarian masterpiece, where succulent cubes of paneer (cottage cheese) are skillfully prepared with an array of fragrant spices in a time-honored traditional wok. Immerse your senses in the symphony of spices as they dance together, creating a harmonious blend that elevates the taste of this culinary delight. Each bite is a journey through the vibrant tapestry of Indian cuisine, showcasing the perfect balance of textures and flavors that make this dish an absolute sensory delight.",
       price: "250",
-      rating: "4.9",
+      rating: "4.1",
       quantity: 1,
     },
     {
@@ -48,9 +48,9 @@ const allItems = {
       img: pizza,
       caption: "Pizza - A Perfect Fusion of Flavors and Happiness!",
       description:
-        "A classic favorite with a crispy crust, savory tomato sauce, melted cheese, and a variety of delicious toppings.",
+        "Savor the timeless allure of a classic favorite - a pizza that tantalizes the taste buds with its crispy crust, adorned with a luscious layer of savory tomato sauce. Revel in the joy of gooey, melted cheese generously blanketing the surface, creating a perfect harmony of textures and flavors. What sets this pizza apart is the delightful medley of delectable toppings that elevate it to culinary perfection. Whether adorned with succulent meats, fresh vegetables, or a combination of both, each bite is a symphony of taste that captures the essence of this beloved dish.",
       price: "150",
-      rating: "4.5",
+      rating: "4.0",
       quantity: 1,
     },
     {
@@ -58,9 +58,9 @@ const allItems = {
       img: chickenTikka,
       caption: "Chicken Tikka - A Spicy Grilled Delight!",
       description:
-        "Succulent chicken pieces marinated in aromatic spices and yogurt, grilled to perfection, delivering a burst of flavors.",
+        "Delight your palate with the exquisite taste of succulent chicken pieces, meticulously marinated in a harmonious blend of aromatic spices and creamy yogurt. Expertly grilled to perfection, each mouthwatering morsel promises a symphony of flavors that captivates the senses. The infusion of spices, combined with the tenderizing effect of yogurt, creates a tantalizing marinade that imparts depth and richness to the chicken. As the grill works its magic, the result is a culinary masterpiece - a burst of flavors that dance on your taste buds, offering a perfect balance of smokiness, spice, and juiciness.",
       price: "200",
-      rating: "4.7",
+      rating: "4.5",
       quantity: 1,
     },
     {
@@ -68,7 +68,7 @@ const allItems = {
       img: biryani,
       caption: "Biryani - A Flavorful Rice Delicacy!",
       description:
-        "Fragrant and flavorful rice dish layered with tender meat, aromatic spices, and caramelized onions, offering a harmonious blend of tastes and textures.",
+        "Immerse yourself in the indulgent experience of a fragrant and flavorful rice dish, where layers of tender meat, aromatic spices, and caramelized onions come together in perfect harmony. Each spoonful unveils a symphony of tastes and textures, creating a culinary masterpiece that's a delight to the senses. The rice, infused with the aromatic spices, forms a canvas for the succulent tender meat to shine. As you delve into the layers, the caramelized onions add a touch of sweetness and depth, enhancing the overall flavor profile.",
       price: "100",
       rating: "4.6",
       quantity: 1,
@@ -78,7 +78,7 @@ const allItems = {
       img: bbq,
       caption: "Smoky BBQ Delights",
       description:
-        "Savor the rich, smoky flavors of perfectly grilled barbecue dishes.",
+        "Indulge your senses in the enticing allure of rich, smoky flavors that emanate from perfectly grilled barbecue dishes. Each bite is a symphony of charred perfection, delivering a culinary experience that transcends the ordinary. The grilling process imparts a unique smokiness to the dishes, enhancing their depth and creating a tantalizing complexity of taste. Whether it's succulent meats, vibrant vegetables, or a combination of both, the grill marks the beginning of a gastronomic journey that promises satisfaction with every mouthful.",
       price: "320",
       rating: "4.2",
       quantity: 1,
@@ -88,7 +88,7 @@ const allItems = {
       img: friedFish,
       caption: "Crispy Fried Fish",
       description:
-        "Enjoy tender and flaky fish, coated in a crispy, golden-brown batter.",
+        "Indulge in the ultimate seafood delight with our 'Crispy Fried Fish.' Delight your taste buds with the exquisite experience of savoring tender and flaky fish, perfectly encased in a tantalizingly crispy, golden-brown batter. This culinary masterpiece offers a symphony of textures, as each bite reveals the succulent juiciness of the fish juxtaposed against the satisfying crunch of the expertly crafted coating. The golden-brown exterior serves as a gateway to a world of flavor, preserving the natural juiciness of the fish while delivering a delightful contrast in every mouthful.",
       price: "120",
       rating: "4.5",
       quantity: 1,
@@ -98,7 +98,7 @@ const allItems = {
       img: friedRice,
       caption: "Flavorful Fried Rice Dishes",
       description:
-        "Satisfy your cravings with aromatic fried rice, bursting with savory ingredients and spices.",
+        "Embark on a culinary journey with our enticing 'Flavorful Fried Rice Dishes.' Elevate your dining experience as you satisfy your cravings with each aromatic bite of our expertly crafted fried rice, meticulously prepared to perfection. Immerse your senses in the symphony of flavors that dance through each grain of rice, a medley of savory ingredients and spices that come together harmoniously. Our flavorful fried rice dishes are a celebration of culinary finesse, where the artful combination of high-quality ingredients results in a dish that transcends the ordinary. Each spoonful unveils a tapestry of tastes, from the richness of perfectly cooked rice to the vibrant notes of seasonings and the delectable blend of savory ingredients.",
       price: "120",
       rating: "4.6",
       quantity: 1,
@@ -108,9 +108,9 @@ const allItems = {
       img: noodles,
       caption: "Noodle Extravaganza",
       description:
-        "Experience the world of noodles, from slurp-worthy ramen to stir-fried classics.",
+        "Embark on a captivating journey through the diverse world of noodles, where each strand tells a tale of culinary excellence. Immerse yourself in the rich and flavorful universe, ranging from the slurp-worthy delights of ramen to the sizzling artistry of stir-fried classics. Our menu invites you to experience the intricate dance of textures and tastes that noodles bring to the table.Savor the umami-packed goodness of ramen, where every spoonful is a symphony of broth, perfectly cooked noodles, and an array of delectable toppings.",
       price: "65",
-      rating: "4.4",
+      rating: "3.2",
       quantity: 1,
     },
   ],
@@ -120,7 +120,7 @@ const allItems = {
       img: eggBenedict,
       caption: "Eggs Benedict - A Classic Breakfast Treat!",
       description:
-        "A traditional breakfast dish consisting of poached eggs served on English muffins with Canadian bacon and hollandaise sauce.",
+        "Delight your mornings with a classic breakfast indulgence – our traditional dish features expertly poached eggs nestled on English muffins, accompanied by savory Canadian bacon, and crowned with the luscious richness of hollandaise sauce. This iconic breakfast ensemble brings together the perfect harmony of textures and flavors, as the velvety hollandaise sauce cascades over the perfectly poached eggs, creating a decadent symphony on the palate. The English muffins provide a satisfying base, while the addition of Canadian bacon adds a savory touch, elevating the entire dish to a breakfast masterpiece.",
       price: "300",
       rating: "4.9",
       quantity: 1,
@@ -130,7 +130,7 @@ const allItems = {
       img: pasta,
       caption: "Creamy Garlic Parmesan Pasta",
       description:
-        "Indulge in a delightful culinary experience with our Creamy Garlic Parmesan Pasta",
+        "Embark on a culinary journey of indulgence with our exquisite Creamy Garlic Parmesan Pasta. Immerse your senses in the rich and velvety allure of this pasta creation, where perfectly cooked noodles are generously coated in a luscious blend of creamy garlic and Parmesan sauce. Each forkful promises a symphony of flavors, as the robust garlic notes harmonize with the nutty undertones of Parmesan, creating a delectable and satisfying taste experience.The velvety texture of the sauce lovingly embraces each strand of pasta, ensuring a luxurious and comforting mouthfeel with every bite.",
       price: "150",
       rating: "4.7",
       quantity: 1,
@@ -140,7 +140,7 @@ const allItems = {
       img: pancakes,
       caption: "Fluffy and Delicious Pancakes!",
       description:
-        "Start your day with fluffy pancakes, drizzled with syrup and topped with your favorite extras.",
+        "Kickstart your day with the perfect morning indulgence – our fluffy pancakes, expertly crafted to bring a smile to your face. Picture a stack of golden-brown delights, each layer a pillowy masterpiece waiting to be savored. These pancakes are more than just breakfast; they're a celebration on a plate.Let the warm aroma of freshly cooked pancakes awaken your senses as you anticipate the moment they arrive at your table.",
       price: "70",
       rating: "4.8",
       quantity: 1,
@@ -150,7 +150,7 @@ const allItems = {
       img: waffles,
       caption: "Crispy and Golden Brown Waffles!",
       description:
-        "A popular breakfast dish consisting of a batter of flour, milk, and eggs that is cooked in a waffle iron. Waffles are often served with syrup, fruit, and whipped cream.",
+        "Indulge in the morning delight of a beloved breakfast classic waffles. Picture a light and airy batter made from a perfect blend of flour, milk, and eggs, expertly poured into a waffle iron to achieve that golden crispiness on the outside and a fluffy interior. The result is a stack of waffles that promises to elevate your breakfast experience to new heights.Dress up your waffles according to your desires the canvas is yours to customize. Drizzle them with rich, golden syrup that seeps into every groove, creating a sweet and decadent embrace.",
       price: "250",
       rating: "4.7",
       quantity: 1,
@@ -160,7 +160,7 @@ const allItems = {
       img: frenchToast,
       caption: "Sweet and Savory French Toast!",
       description:
-        "A popular breakfast dish consisting of slices of bread that are dipped in a batter of milk and eggs and then cooked in a pan. French toast is often served with syrup, fruit, and whipped cream.",
+        "Delight in the comfort of a beloved breakfast classic French Toast. This iconic dish involves slices of bread luxuriously dipped in a batter crafted from a harmonious blend of milk and eggs before being expertly cooked to golden perfection in a pan. The result is a symphony of textures, with the exterior crisped to a delightful golden brown, encapsulating a soft and custardy interior that melts in your mouth.Enhance your French Toast experience with a drizzle of rich syrup, allowing its sweet embrace to mingle with the warm notes of the cooked bread.",
       price: "200",
       rating: "4.6",
       quantity: 1,

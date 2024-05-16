@@ -57,7 +57,9 @@
 .navbar_link:hover {
   border-bottom-color: #ddd;
 }
-
+.navbar_links .active {
+  border-bottom-color: #ddd;
+}
 /* Navbar button */
 .navbar_button {
   padding: 0.5rem 1rem; /* 8px 16px */

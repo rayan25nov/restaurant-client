@@ -1,5 +1,5 @@
 import React from "react";
-import styles from "./OurServices.module.css";
+import styles from "./Common2.module.css";
 
 function PaymentOptions() {
   return (

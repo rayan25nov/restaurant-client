@@ -1,68 +1,84 @@
-/* Define breakpoints for responsiveness */
-@media screen and (max-width: 767px) {
-  .review_card {
-    width: 90%;
-    margin: 0 auto;
-    margin-bottom: 2rem;
-    border-radius: 0.5rem;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    overflow: hidden;
-  }
-  .review_card img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    border-radius: 50%;
-  }
+.card {
+  border-radius: 25px;
+  background-color: #fff;
+  /* text-decoration: none; */
+}
+.imageContent,
+.cardContent {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 10px, 14px;
+}
+.cardContent {
+  margin-top: 40px;
+}
+.imageContent {
+  position: relative;
+  row-gap: 5px;
+  padding: 25px 0;
+}
+.overlay {
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  background-color: #4070f4;
+  border-radius: 25px 25px 0 25px;
+}
+.overlay::after,
+.overlay::before {
+  content: "";
+  position: absolute;
+  right: 0;
+  bottom: -40px;
+  height: 40px;
+  width: 40px;
+  background-color: #4070f4;
+}
+.overlay::after {
+  border: none;
+  border-radius: 0 25px 0 0;
+  background-color: #fff;
 }
 
-@media screen and (min-width: 768px) {
-  .review_card {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 70%;
-    margin: 0 auto;
-    margin-bottom: 2rem;
-    border-radius: 0 3rem 0 3rem;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    overflow: hidden;
-  }
-
-  .review_card img {
-    width: 50%;
-    max-height: 100%;
-    object-fit: cover;
-    border-radius: 0 0.5rem 0 0;
-  }
-
-  .icons {
-    display: flex;
-    gap: 0.25rem;
-    padding: 0.5rem;
-    background-color: #f1f1f1;
-    border-radius: 0.5rem;
-  }
-
-  .icons svg {
-    color: #ffc107;
-  }
-
-  .review_content {
-    width: 50%;
-    padding: 1rem;
-  }
+.cardImage {
+  position: relative;
+  height: 150px;
+  width: 150px;
+  border-radius: 50%;
+  background: #fff;
+  padding: 3px;
 }
 
-.review_content p {
-  font-size: 1.2rem;
-  margin: 0.5rem 0;
+.cardImage .cardImg {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 3px solid #4070f4;
 }
 
-.review_card p:last-child {
-  margin-top: auto;
-  margin-bottom: 0.5rem;
-  padding: 0.5rem;
-  background-color: #f1f1f1;
-  border-radius: 0 0 0.5rem 0;
+.name {
+  font-size: 1.5rem;
+  font-weight: 500;
+  color: #333;
+}
+.description {
+  font-size: 1.25rem;
+  color: #707070;
+  text-align: center;
+  min-height: 6.5rem;
+}
+
+.rating {
+  display: flex;
+  align-items: center;
+  font-size: 1rem;
+}
+.star {
+  font-size: 2rem;
+  margin-right: 3px;
+  color: #4070f4;
 }

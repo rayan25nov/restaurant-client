@@ -1,5 +1,4 @@
-import React from "react";
-import Styles from "./Footer.module.css"; // Import your CSS module
+import React, { useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faTwitter,
@@ -7,8 +6,36 @@ import {
   faInstagram,
 } from "@fortawesome/free-brands-svg-icons";
 import { Link } from "react-router-dom";
+import emailjs from "@emailjs/browser";
+import Styles from "./Footer.module.css"; // Import your CSS module
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+const serviceId = import.meta.env.VITE_Service_ID;
+const templateId = import.meta.env.VITE_Template_ID;
+const userId = import.meta.env.VITE_User_ID;
 
 const Footer = () => {
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [subject, setsubject] = useState("");
+  const [message, setMessage] = useState("");
+
+  const handleSubmit = (event) => {
+    event.preventDefault();
+
+    // Send email using emailjs
+    emailjs.sendForm(serviceId, templateId, event.target, userId).then(
+      (response) => {
+        console.log("Email sent successfully:", response);
+        toast.success("Email sent successfully"); // Add toast notification
+      },
+      (error) => {
+        console.error("Email sending failed:", error);
+        toast.error("Email sending failed"); // Add toast notification for failure
+      }
+    );
+  };
+  
   return (
     <footer className={Styles.footer}>
       <div className={Styles.footerLinks}>
@@ -60,21 +87,45 @@ const Footer = () => {
       </div>
       <section className={Styles.contactSection}>
         <h2>Contact Us</h2>
-        <form className={Styles.contactForm}>
+        <form className={Styles.contactForm} onSubmit={handleSubmit}>
           <div className={Styles.formGroup}>
-            <input type="text" name="name" placeholder="Name" />
+            <input
+              type="text"
+              name="name"
+              placeholder="Name"
+              value={name}
+              onChange={(e) => setName(e.target.value)}
+              required
+            />
+          </div>
+
+          <div className={Styles.formGroup}>
+            <input
+              type="email"
+              name="email"
+              placeholder="Email"
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
+              required
+            />
           </div>
           <div className={Styles.formGroup}>
-            <input type="email" name="email" placeholder="Email" />
-          </div>
-          <div className={Styles.formGroup}>
-            <input type="text" name="subject" placeholder="Subject" />
+            <input
+              type="text"
+              name="subject"
+              placeholder="Subject"
+              value={subject}
+              onChange={(e) => setsubject(e.target.value)}
+              required
+            />
           </div>
           <div className={Styles.formGroup}>
             <textarea
               name="message"
               rows="4"
               placeholder="Message"
+              value={message}
+              onChange={(e) => setMessage(e.target.value)}
               required
             ></textarea>
           </div>

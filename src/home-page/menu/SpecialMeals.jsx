@@ -1,16 +1,28 @@
-import { React, useState } from "react";
+import { React, useState, useEffect } from "react";
 import SpecialMenuCard from "./SpecialMenuCard";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faAnglesLeft, faAnglesRight } from "@fortawesome/free-solid-svg-icons";
-import menuItems from "./SpecialMenuItems.js";
 import Styles from "./SpecialMeals.module.css";
+import axios from "axios";
+
 const SpecialMeals = () => {
+  const [menuItems, setMenuItems] = useState([]);
   const itemsPerPage = 4; // Number of items to show per page
   //Defining which page to show
   const [currentPage, setCurrentPage] = useState(0);
   // Saving the state of input changes
   const [searchTerm, setSearchTerm] = useState("");
   // Calculating the total number of pages
+  const fetchSpecialItems = async () => {
+    const url = import.meta.env.VITE_API_URL;
+    const apiUrl = `${url}/products/special`;
+    const { data: res } = await axios.get(apiUrl);
+    setMenuItems(res.data);
+  };
+
+  if (!menuItems) {
+    return <div>Loading...</div>;
+  }
   const totalPages = Math.ceil(menuItems.length / itemsPerPage);
 
   const handleNext = () => {
@@ -29,6 +41,10 @@ const SpecialMeals = () => {
   const startIndex = currentPage * itemsPerPage;
   const endIndex = startIndex + itemsPerPage;
   const visibleItems = displayedItems.slice(startIndex, endIndex);
+
+  useEffect(() => {
+    fetchSpecialItems();
+  }, []);
 
   return (
     <div className={Styles.container} id="meals-component">
@@ -62,8 +78,8 @@ const SpecialMeals = () => {
           {visibleItems.map((menuItem, index) => (
             <div key={index} className={`${Styles.activeCard}`}>
               <SpecialMenuCard
-                id={menuItem.id}
-                img={menuItem.img}
+                id={menuItem._id}
+                image={menuItem.image}
                 caption={menuItem.caption}
                 description={menuItem.description}
                 price={menuItem.price}

@@ -1,11 +1,10 @@
 import React from "react";
 import Styles from "./OrderItem.module.css";
 
-const OrderItem = ({ order, deleteOrder }) => {
+const OldOrderItem = ({ order }) => {
   return (
     <tr className={Styles.orderItem}>
       <td>{order._id}</td>
-
       <td>
         {order.products.map((item) => (
           <div key={item._id} className={Styles.productItem}>
@@ -32,13 +31,8 @@ const OrderItem = ({ order, deleteOrder }) => {
         ))}
       </td>
       <td>₹{order.totalMoney}</td>
-      <td>{order.status}</td>
-      <td>{order.paymentStatus}</td>
-      <td>
-        <button onClick={() => deleteOrder(order._id)}>Cancel</button>
-      </td>
     </tr>
   );
 };
 
-export default OrderItem;
+export default OldOrderItem;
