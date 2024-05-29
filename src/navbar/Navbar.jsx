@@ -121,6 +121,9 @@ const Navbar = () => {
           <FontAwesomeIcon icon={faPhone} className={Styles.navbar_icon} />
           <span className={Styles.navbar_text}>8507545405</span>
         </div>
+        <button onClick={handleLogout}>
+          <FontAwesomeIcon icon={faPowerOff} className={Styles.navbar_icon} />
+        </button>
       </div>
 
       <div className={Styles.navbar_info}>
@@ -139,9 +142,6 @@ const Navbar = () => {
             />
           </Link>
           <span className={Styles.navbar_text}>{cartLength}</span>
-          <button onClick={handleLogout}>
-            <FontAwesomeIcon icon={faPowerOff} className={Styles.navbar_icon} />
-          </button>
         </div>
       </div>
       <div className={Styles.navbar_toggle} onClick={toggleMenu}>

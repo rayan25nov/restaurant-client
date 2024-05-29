@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import Home from "./common/Home";
 import About from "./about/About";
 import Meals from "./menu/SpecialMeals";

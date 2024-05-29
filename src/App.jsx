@@ -5,7 +5,7 @@ import {
   useLocation,
   Navigate,
 } from "react-router-dom";
-import { useLayoutEffect } from "react";
+import { useEffect, useLayoutEffect } from "react";
 
 const Wrapper = ({ children }) => {
   const location = useLocation();
@@ -39,9 +39,39 @@ import ForgotPassword from "./auth/ForgotPassword";
 import EmailVerify from "./auth/email/EmailVerify";
 import ResetPassword from "./auth/email/ResetPassword";
 import GiveFeedback from "./home-page/reviews/GiveFeedback";
+import axios from "axios";
 
 function App() {
   const JWT_TOKEN = localStorage.getItem("token");
+  const isTokenExpired = async () => {
+    if (JWT_TOKEN) {
+      try {
+        const url = import.meta.env.VITE_API_URL;
+        const apiUrl = `${url}/checkTokenExpiration`;
+        const { data: res } = await axios.get(apiUrl, {
+          headers: {
+            Authorization: `Bearer ${JWT_TOKEN}`,
+          },
+        });
+        if (res.expired) {
+          localStorage.removeItem("token");
+          window.location = "/login";
+          return;
+        }
+      } catch (err) {
+        // Handle error
+        console.error("Error checking token expiration:", err);
+        localStorage.removeItem("token");
+        window.location = "/login";
+        return;
+      }
+    }
+  };
+
+  useEffect(() => {
+    isTokenExpired();
+  }, []);
+
   return (
     <>
       <ToastContainer />

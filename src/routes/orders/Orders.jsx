@@ -6,6 +6,7 @@ import Styles from "./Orders.module.css"; // Assuming you have a CSS module for 
 import axios from "axios";
 import { toast } from "react-toastify";
 import { setOrderLength } from "../../redux/order/orderLengthSlice";
+import socket from "../../socket.js";
 
 const Orders = () => {
   const [orders, setOrders] = useState([]);
@@ -57,7 +58,7 @@ const Orders = () => {
         },
       }
     );
-    console.log(res);
+    // console.log(res);
     fetchOrders();
   };
   // funtion to pay the amount
@@ -106,7 +107,7 @@ const Orders = () => {
             { data }
           );
 
-          console.log("Response", res);
+          // console.log("Response", res);
           if (res.success) {
             toast.success("Payment successful!");
             const orderId = orders[0]._id;
@@ -169,14 +170,22 @@ const Orders = () => {
     return () => clearTimeout(timer); // Cleanup the timer on component unmount or re-render
   }, [orders]); // Run the effect whenever orders change
 
-  // useEffect(() => {
-  //   if (orders.length !== 0 && orders[0].status === "Delivered") {
-  //     moveOrderToOldOrder();
-  //   }
-  // }, [orders]); // Run the effect whenever orders change
-
   useEffect(() => {
     fetchOrders();
+    // Listen for order updates
+    socket.on("orderUpdated", (updatedOrder) => {
+      setOrders((prevOrders) =>
+        prevOrders.map((order) =>
+          order._id === updatedOrder._id ? updatedOrder : order
+        )
+      );
+    });
+
+    socket.on("orderDeleted", (deletedOrderId) => {
+      setOrders((prevOrders) =>
+        prevOrders.filter((order) => order._id !== deletedOrderId)
+      );
+    });
   }, []); // Run once on component mount
 
   if (!orders.length) {
